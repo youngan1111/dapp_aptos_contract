@@ -1,0 +1,34 @@
+[package]
+name = "QVE_Protocol"
+version = "0.0.1"
+upgrade_policy = "compatible"
+
+[addresses]
+qve_protocol = "dc21fac3fbcf71b5529a0853185140a11b1dee00aab4b8b521d00ddd19db5051"
+pyth = "0x7e783b349d3e89cf5931af376ebeadbfab855b3fa239b7ada8f5a92fbea6b387"
+deployer = "0xb31e712b26fd295357355f6845e77c888298636609e93bc9b05f0f604049f434"
+wormhole = "0x5bc11445584a763c1fa7ed39081f1b920954da14e04b32440cba863d03e19625"
+
+[dependencies.Liquidswap]
+git = 'https://github.com/pontem-network/liquidswap.git'
+rev = "v0.4.4"
+
+[dependencies.LiquidswapRouterV2]
+git = 'https://github.com/pontem-network/liquidswap.git'
+subdir = 'liquidswap_router_v2/'
+rev = "v0.4.4"
+
+[dependencies.LiquidswapLP]
+git = 'https://github.com/pontem-network/liquidswap.git'
+subdir = 'liquidswap_lp/'
+rev = "v0.4.4"
+
+[dependencies.Pyth]
+git = "https://github.com/pyth-network/pyth-crosschain.git"
+subdir = "target_chains/aptos/contracts"
+rev = "pyth-js-v4"
+
+[dev-addresses]
+pyth = "0xe2f37b8ac45d29d5ea23eb7d16dd3f7a7ab6426f5a998d6c23ecd3ae8d9d29eb"
+deployer = "0x277fa055b6a73c42c0662d5236c65c864ccbf2d4abd21f174a30c8b786eab84b"
+wormhole = "0x251011524cd0f76881f16e7c2d822f0c1c9510bfd2430ba24e1b3d52796df204"
